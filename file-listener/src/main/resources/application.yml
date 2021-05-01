@@ -1,0 +1,17 @@
+spring:
+   kafka:
+      consumer:
+         bootstrap-servers: localhost:9092
+         group-id: file-name-retreiver
+         auto-offset-reset: earlist
+         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      producer:
+         bootstrap-servers: localhost:9092
+         key-serializer: org.apache.kafka.common.serialization.StringSerializer
+         value-serializer: org.apache.kafka.common.serialization.StringSerializer
+kafka:
+   topic:
+      employee: employee-topic
+      customer: customer-topic
+      department: department-topic
